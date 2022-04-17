@@ -1,0 +1,10 @@
+# Racket files
+compiled
+*.rkt~
+*.bak
+.DS_Store
+
+
+# RSA keys
+priv_key.txt
+pub_key.txt
