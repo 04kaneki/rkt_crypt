@@ -15,6 +15,7 @@ A simple racket project to demonstrate the RSA algorithm.
 ## Technologies
 
 * Racket 8.4
+* DrRacket (IDE)
 
 <br>
 
@@ -29,7 +30,8 @@ git clone https://github.com/04kaneki/rkt_crypt/
 
 ## Setup
 
-Execute these commands to open these projects in vscode.
+Open the files in DrRacket and interact with the functions through the "interaction window".
+
 
 <br>
 
