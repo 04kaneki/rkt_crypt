@@ -1,7 +1,7 @@
 #lang racket
 
 ; provide methods for genrating RSA keys
-(provide get_keys get&save_keys)
+(provide get_keys get&save_keys get_public_key get_private_key)
 
 ; required modules
 (require math)
@@ -25,8 +25,9 @@
 
 ; generates the private key for RSA encryption
 (define (get_private_key e phi)
-  (modular-inverse e phi)
+  ((λ (d) (if (< d 0) (+ phi d) d)) (egcd e phi 0 1 1 0))
   )
+
 
 
 ; generates RSA key pair for encryption&decryption
@@ -42,7 +43,7 @@
   (let rec ([d (get_private_key e phi)])
     (if (= e d)
         (rec)
-         (list (list e n) (list d n))
+         (list (cons e n) (cons d n))
         )
     )
   )
