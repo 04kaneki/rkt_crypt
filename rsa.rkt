@@ -1,5 +1,7 @@
 #lang racket
 
+(provide encrypt decrypt)
+
 (require "utils.rkt")
 (require "file.rkt")
 
