@@ -50,7 +50,7 @@
     )
   )
 
-; get values for the rabin miller test
+; get all values for deviding p-1 by 2
 (define (get_values n)
   (let rec ([max_div 0] [ec (-- n)])
     (if (zero? (modulo2 ec))
