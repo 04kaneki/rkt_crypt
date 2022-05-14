@@ -53,14 +53,5 @@
   (bytes->string/utf-8 (inr N (bytes)))
   )
 
-;(define (test s)
-;  (let rec([B (string->bytes/utf-8 s)] [value 0] [i 0])
-;    (if (= i (-- (string-length s)))
-;           value 
-;    (rec B (+ (bytes-ref B i) (* value 256)) (++ i)))
-;    
-;    )
-;  )
-
 
 
